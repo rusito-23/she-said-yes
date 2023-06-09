@@ -3,11 +3,11 @@ import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { theme } from './../config';
-import { Backdrop } from './Backdrop.jsx';
+import { Backdrop } from './Backdrop';
 import { CardHeader } from './Card';
-import { PopUpContainer } from './PopUpContainer.jsx';
+import { PopUpContainer } from './PopUpContainer';
 import { Arrow } from './Arrow';
-import { Button } from './Button.jsx';
+import { Button } from './Button';
 import { Icon } from '../utils/Icon.js';
 
 // The card details container.

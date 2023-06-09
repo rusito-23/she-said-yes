@@ -3,9 +3,9 @@ import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { theme } from '../config';
-import { Backdrop } from './Backdrop.jsx';
-import { PopUpContainer } from './PopUpContainer.jsx';
-import { Spinner } from './Spinner.jsx';
+import { Backdrop } from './Backdrop';
+import { PopUpContainer } from './PopUpContainer';
+import { Spinner } from './Spinner';
 
 // The card details container.
 // Gets displayed in the center of the screen
@@ -54,6 +54,10 @@ export const Form = forwardRef(({ onClick, iframeSrc, ...props }, ref) => {
         width: containerRef?.current?.offsetWidth - 8,
       });
     }
+    return () => {
+      setIsLoading(true);
+      setDimensions(null);
+    };
   }, [containerRef]);
 
   return (
